@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+#calculator-container {
+  font-family: 'Noto Sans Math', 'Arial';
+  background-color: #444;
+  padding: 0.8rem;
+  width: 24rem;
+  border-radius: 0.2rem;
+}
+
+/* DisplayPanel */
+#display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  background-color: aquamarine;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+.memory {
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+  margin-top: 0.2rem;
+  opacity: 0.7;
+}
+.calculation {
+  font-size: 1.7rem;
+  text-align: end;
+  margin-bottom: 0.7rem;
+  margin-right: 0.5rem;
+}
+
+/* Keypad */
+#keypad {
+  width: 100%;
+  background-color: transparent;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.row div {
+  flex: 1 1 1.3rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0rem;
+  background-color: #222;
+  color: white;
+  margin: 0.2rem;
+  border-top: 2px solid #555;
+  border-left: 2px solid #555;
+  border-right: 2px solid #444;
+  border-bottom: 2px solid #444;
+  border-style: outset;
+  border-radius: 0.3rem;
+  cursor: default;
+}
+.row div:active {
+  border-top: 2px solid #444;
+  border-left: 2px solid #444;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  border-style: inset;
+}
+
+.row .number {
+  background-color: silver;
+  color: #111;
+}
+.row .operator {
+  background: linear-gradient(#333, #222);
+}
+.row.advanced-buttons {
+  margin-bottom: 0.5rem;
+}
+.row.advanced-buttons div, .row.first-row div {
+font-size: 1.1rem;
+}
+.row.first-row div:not(#all-clear) {
+  background: #333;
+  color: #ED9121;
+}
+#all-clear {
+  background-color: #900D09;
+}
+#equal {
+  background:#2E5894;
+  font-weight: 700;
+}
+#clear {
+  background:  #ED9121;
+  color: #111;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+  #calculator-container {
+    min-width: 22rem;
+    width: 100%;
+  }
+}

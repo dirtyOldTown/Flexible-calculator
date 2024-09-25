@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script  src="main.js" defer></script>
+    <style>
+      @font-face {
+        font-family: 'Noto Sans Math';
+        src: url('./fonts/NotoSans/NotoSansMath-Regular.woff') format('woff');
+        src: url('./fonts/NotoSans/NotoSansMath-Regular.woff2') format('woff2');
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+      }
+    </style>
+</head>
+<body>
+  <main id="calculator-container">
+    <section id="display">
+      <div class="memory">M=<span class="memory-content">0</span></div>
+      <div class="calculation"></div>
+    </section>
+    <section class="keypad">
+      <div class="row first-row">
+        <div id="all-clear">AC</div>
+        <div id="memory-revoke">MR</div>
+        <div id="memory-plus">M+</div>
+        <div id="memory-minus">M-</div>
+        <div id="memory-clear">MC</div>
+      </div>
+      <div class="row advanced-buttons">
+        <div id="pi" class="operator">&#x1D745;</div>
+        <div id="e" class="operator">e</div>
+        <div id="sqr" class="operator">&#8730;</div>
+        <div id="throot" class="operator">&#8731;</div>
+        <div id="percent" class="operator">%</div>
+      </div>
+      <div class="row">
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="operator">+</div>
+        <div class="operator">-</div>
+      </div>
+      <div class="row">
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div id="multiply" class="operator">&times;</div>
+        <div class="operator">/</div>
+      </div>
+      <div class="row">
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+        <div class="operator bracket left-bracket">(</div>
+        <div class="operator bracket right-bracket">)</div>
+      </div>
+      <div class="row last-row">
+        <div class="number">0</div>
+        <div class="operator decimal-point">.</div>
+        <div id="clear" class="operator">C</div>
+        <div id="equal" class="operator">=</div>
+      </div>
+    </section>
+  </main>  
+</body>
+</html>

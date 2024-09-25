@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Noto Sans Math';
+    src: url('NotoSansMath-Regular.woff2') format('woff2'),
+        url('NotoSansMath-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
