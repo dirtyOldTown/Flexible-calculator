@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
 }
-#calculator-container {
+body {
   font-family: 'Noto Sans Math', 'Arial';
+}
+#calculator-container {
   background-color: #444;
   padding: 0.8rem;
   width: 24rem;
@@ -26,11 +28,18 @@
   margin-top: 0.2rem;
   opacity: 0.7;
 }
-.calculation {
-  font-size: 1.7rem;
+.calculation-container {
   text-align: end;
   margin-bottom: 0.7rem;
   margin-right: 0.5rem;
+}
+.calculation-container > input {
+  font-size: 1.7rem;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  text-align: end;
+  width: 100%;
 }
 
 /* Keypad */
@@ -65,7 +74,6 @@
   border-bottom: 2px solid #555;
   border-style: inset;
 }
-
 .row .number {
   background-color: silver;
   color: #111;
@@ -77,8 +85,8 @@
   margin-bottom: 0.5rem;
 }
 .row.advanced-buttons div, .row.first-row div {
-font-size: 1.1rem;
-}
+  font-size: 1.2rem;
+  }
 .row.first-row div:not(#all-clear) {
   background: #333;
   color: #ED9121;
@@ -95,6 +103,11 @@ font-size: 1.1rem;
   color: #111;
   font-weight: 700;
 }
+.row .decimal-point {
+  background: silver;
+  color:#111;
+}
+
 
 @media screen and (max-width: 500px) {
   body {
