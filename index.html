@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="calculator.css">
-    <script  src="main.js" defer></script>
+    <script  type="module" src="main.js" defer></script>
     <style>
       @font-face {
         font-family: 'Noto Sans Math';
@@ -21,36 +21,36 @@
   <main id="calculator-container">
     <section id="display">
       <div class="memory">M=<span class="memory-content">0</span></div>
-      <div class="calculation-container"><input name="expression" placeholder="0"></div>
+      <div class="calculation-container"><input name="expression" placeholder="0" onfocus="this.blur()"/></div>
     </section>
     <section class="keypad">
       <div class="row first-row">
-        <div id="all-clear">AC</div>
-        <div id="memory-revoke">MR</div>
-        <div id="memory-plus">M+</div>
-        <div id="memory-minus">M-</div>
-        <div id="memory-clear">MC</div>
+        <div id="all-clear" class="invisible">AC</div>
+        <div id="memory-revoke" class="invisible">MR</div>
+        <div id="memory-plus" class="invisible">M+</div>
+        <div id="memory-minus" class="invisible">M-</div>
+        <div id="memory-clear" class="invisible">MC</div>
       </div>
       <div class="row advanced-buttons">
         <div id="pi" class="operator">&#x1D745;</div>
         <div id="e" class="operator">e</div>
-        <div id="sqr" class="operator">&#8730;</div>
-        <div id="throot" class="operator">&#8731;</div>
-        <div id="percent" class="operator">%</div>
+        <div id="square-root" class="operator">&#8730;</div>
+        <div id="cube-root" class="operator">&#8731;</div>
+        <div id="percent" class="operator first-input-invisible">%</div>
       </div>
       <div class="row">
         <div class="number">1</div>
         <div class="number">2</div>
         <div class="number">3</div>
-        <div class="operator">+</div>
+        <div class="operator first-input-invisible">+</div>
         <div class="operator">-</div>
       </div>
       <div class="row">
         <div class="number">4</div>
         <div class="number">5</div>
         <div class="number">6</div>
-        <div id="multiply" class="operator">&times;</div>
-        <div class="operator">/</div>
+        <div id="multiply" class="operator first-input-invisible">&times;</div>
+        <div class="operator first-input-invisible">/</div>
       </div>
       <div class="row">
         <div class="number">7</div>
@@ -62,8 +62,8 @@
       <div class="row last-row">
         <div class="number">0</div>
         <div class="operator decimal-point">.</div>
-        <div id="clear" class="operator">C</div>
-        <div id="equal" class="operator">=</div>
+        <div id="clear" class="operator invisible">C</div>
+        <div id="equal" class="operator invisible">=</div>
       </div>
     </section>
   </main>  
