@@ -1,4 +1,6 @@
 import { firstInputHandler } from "./controllers/firstInputHandler.js";
+import { preventDuplicateOperator } from "./controllers/preventDuplicateOperator.js";
+import { minusOperatorCorrection } from "./controllers/minusOperatorCorrection.js";
 
 document.addEventListener("mousedown", (event) => {
   event.preventDefault();
@@ -16,7 +18,10 @@ keypad.addEventListener("click", (e) => {
   if (len == 0) {
     firstInputHandler(target, input, len, display);
   } else {
+    preventDuplicateOperator(input, display);
     display.value += input;
   }
+  minusOperatorCorrection(display);
 });
+
 
