@@ -1,8 +1,8 @@
-function firstInputHandler(target, input, len, display) {
+function firstInputHandler(target, input, display) {
     if (target.classList.contains("first-input-invisible")) {
       return;
     }
-    if (len == 0 && (input == "0" || input == ".")) {
+    if (display.value.length == 0 && (input == "0" || input == ".")) {
       display.value = "0.";
     } else {
        display.value += input;
