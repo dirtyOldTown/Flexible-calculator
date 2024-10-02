@@ -1,5 +1,5 @@
-import { setOfOperatorsExists } from "../middleware/operatorsHandler.js";
-import { advancedOperators } from "../config/setsOfOperators.js";
+import { setOfOperatorsExists } from "../../middleware/setOfOperatorsHandler.js";
+import { advancedOperators } from "../../config/setsOfOperators.js";
 
 function minusOperatorCorrection(display) {
   let test = display.value;
@@ -7,6 +7,5 @@ function minusOperatorCorrection(display) {
     display.value = "-";
   }
 }
-
 
 export { minusOperatorCorrection }

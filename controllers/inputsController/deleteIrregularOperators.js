@@ -1,6 +1,6 @@
-import { setOfOperatorsExists } from "../middleware/operatorsHandler.js";
-import { deleteDecimalPoint } from "../middleware/deleteDecimalPoint.js";
-import { roots, classicOperators } from "../config/setsOfOperators.js";
+import { setOfOperatorsExists } from "../../middleware/setOfOperatorsHandler.js";
+import { deleteDecimalPoint } from "../../middleware/deleteDecimalPoint.js";
+import { roots, classicOperators } from "../../config/setsOfOperators.js";
 function deleteIrregularOperator(input, display, arr) {
     let match = display.value.slice(-1);
     if (isNaN(match) && setOfOperatorsExists(match, arr)) {
@@ -18,4 +18,5 @@ function deleteOperatorAfterRoots(input, match, display) {
     display.value = display.value.slice(0, -1);
   }
 }
-  export { deleteIrregularOperator }
+
+export { deleteIrregularOperator }

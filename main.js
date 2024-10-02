@@ -1,7 +1,7 @@
-import { firstInputHandler } from "./controllers/firstInputHandler.js";
-import { preventDuplicateOperator } from "./controllers/preventDuplicateOperator.js";
-import { minusOperatorCorrection } from "./controllers/minusOperatorCorrection.js";
-import { deleteIrregularOperator } from "./controllers/deleteIrregularOperators.js";
+import { firstInputHandler } from "./controllers/inputsController/firstInputHandler.js";
+import { preventDuplicateOperator } from "./controllers/inputsController/preventDuplicateOperator.js";
+import { minusOperatorCorrection } from "./controllers/inputsController/minusOperatorCorrection.js";
+import { deleteIrregularOperator } from "./controllers/inputsController/deleteIrregularOperators.js";
 import { ALL_CLEAR, CLEAR } from "./config/operators.js";
 import { advancedOperators, classicOperators } from "./config/setsOfOperators.js";
 
