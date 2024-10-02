@@ -1,4 +1,4 @@
-import { SQUARE_ROOT, CUBE_ROOT, PI, E, MULTIPLY } from "./operators.js";
+import { SQUARE_ROOT, CUBE_ROOT, PI, E, MULTIPLY } from "./operatorsAndConstants.js";
 
 let advancedOperators = [
     PI.textContent,

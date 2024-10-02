@@ -2,8 +2,8 @@ import { firstInputHandler } from "./controllers/inputsController/firstInputHand
 import { preventDuplicateOperator } from "./controllers/inputsController/preventDuplicateOperator.js";
 import { minusOperatorCorrection } from "./controllers/inputsController/minusOperatorCorrection.js";
 import { deleteIrregularOperator } from "./controllers/inputsController/deleteIrregularOperators.js";
-import { ALL_CLEAR, CLEAR } from "./config/operators.js";
-import { advancedOperators, classicOperators } from "./config/setsOfOperators.js";
+import { ALL_CLEAR, CLEAR } from "./config/operatorsAndConstants.js";
+import { advancedOperators, classicOperators } from "./config/setsOfOperatorsAndConstants.js";
 
 document.addEventListener("mousedown", (event) => {
   event.preventDefault();

@@ -1,5 +1,5 @@
 import { setOfOperatorsExists } from "../../middleware/setOfOperatorsHandler.js";
-import { advancedOperators } from "../../config/setsOfOperators.js";
+import { advancedOperators } from "../../config/setsOfOperatorsAndConstants.js";
 
 function preventDuplicateOperator(input, display) {
   let match = display.value.slice(-1);
