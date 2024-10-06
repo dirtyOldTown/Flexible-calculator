@@ -4,10 +4,12 @@ import { specificOperatorsAndConstant, classicOperators, numbers } from "../conf
 
 function insertOperator(str, arr) {
   arr.forEach((value, index, arr) => {
+    // Insert operator(*) before roots and constants (if it not exists)
     if (!setOfOperatorsExists(arr[index-1], classicOperators)
       && setOfOperatorsExists(value, specificOperatorsAndConstant) && index != 0) {
         inputRegulation(str, value, index, arr);
     }
+    // Insert operator(*) after roots and constants (if it not exists)
     if (setOfOperatorsExists(arr[index-1], specificOperatorsAndConstant)
       && setOfOperatorsExists(value, numbers)) {
         inputRegulation(str, value, index, arr);

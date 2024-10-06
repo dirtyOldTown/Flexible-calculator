@@ -6,7 +6,7 @@ import { decimalPointCorrection } from "./controllers/inputsController/decimalPo
 import { ALL_CLEAR, CLEAR, EQUAL, MULTIPLY, PI, E, PERCENT } from "./config/operatorsAndConstants.js";
 import { MEMORY_CLEAR, MEMORY_REVOKE, MEMORY_PLUS, MEMORY_MINUS } from "./config/operatorsAndConstants.js";
 import { numbers, advancedOperatorsAndConstants, classicOperators, specificOperatorsAndConstant, rootsAndConstants } from "./config/setsOfOperatorsAndConstants.js";
-import { calculate } from "./controllers/calculation.js";
+import { calculate } from "./controllers/calculationController.js";
 import { setOfOperatorsExists, setOfNumbersExists } from "./middleware/setOfOperatorsHandler.js";
 import { memoryPlusHandler, memoryMinusHandler, clearMemory } from "./controllers/memoryController.js";
 import { insertOperator } from "./middleware/insertOperator.js";
@@ -25,6 +25,7 @@ memory.addEventListener("mousedown", (event) => {
   event.preventDefault();
 });
 
+// Inputs controller
 keypad.addEventListener("mousedown", (e) => {
   let target = e.target.closest(".number, .operator.visible");
   if (!target) return;
