@@ -3,6 +3,7 @@
 }
 body {
   font-family: 'Noto Sans Math', 'Arial';
+  background-color: silver;
 }
 #calculator-container {
   background-color: #444;
@@ -24,7 +25,7 @@ body {
   margin-bottom: 1rem;
 }
 .memory {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-left: 0.2rem;
   margin-top: 0.2rem;
   color:#222;

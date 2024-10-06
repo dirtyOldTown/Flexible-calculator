@@ -1,5 +1,4 @@
 async function calculate(display, exp) {
-  console.log(exp);
   try {
     let result = await eval(exp);
     if (result.toString().length > 5) {

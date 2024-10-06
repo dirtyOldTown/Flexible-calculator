@@ -1,5 +1,8 @@
-function setOfOperatorsExists(input, arr) {
-    return arr.find(op => op.includes(input));
+function setOfOperatorsExists(str, arr) {
+    return arr.find(op => op.includes(str));
 }
 
-export { setOfOperatorsExists }
+function setOfNumbersExists(str, arr) {
+    return arr.find(op => op.includes(str));
+}
+export { setOfOperatorsExists, setOfNumbersExists }

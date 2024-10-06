@@ -1,6 +1,6 @@
 function deleteDecimalPoint(input, display) {
   if (isNaN(input) && input == ".") {
-   return;
+    return;
   } else {
       display.value += input;
   }
