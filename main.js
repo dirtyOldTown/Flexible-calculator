@@ -2,7 +2,7 @@ import { firstInputHandler } from "./controllers/inputsController/firstInputHand
 import { preventDuplicateOperator } from "./controllers/inputsController/preventDuplicateOperator.js";
 import { minusOperatorCorrection } from "./controllers/inputsController/minusOperatorCorrection.js";
 import { deleteIrregularOperator } from "./controllers/inputsController/deleteIrregularOperators.js";
-import { decimalPointCorrection } from "./controllers/inputsController/decimalPointCorrection.js";
+import { preventIrregularNumber } from "./controllers/inputsController/preventIrregularNumber.js";
 import { ALL_CLEAR, CLEAR, EQUAL, MULTIPLY, PI, E, PERCENT } from "./config/operatorsAndConstants.js";
 import { MEMORY_CLEAR, MEMORY_REVOKE, MEMORY_PLUS, MEMORY_MINUS } from "./config/operatorsAndConstants.js";
 import { numbers, advancedOperatorsAndConstants, classicOperators, specificOperatorsAndConstant, rootsAndConstants } from "./config/setsOfOperatorsAndConstants.js";
@@ -44,7 +44,7 @@ keypad.addEventListener("mousedown", (e) => {
   }
 
   minusOperatorCorrection(display);
-  decimalPointCorrection(display, currentExpression);
+ preventIrregularNumber(display, currentExpression);
 
   // Expression for calculation
   currentExpression = display.value;
@@ -75,6 +75,7 @@ function insertOperatorIfItNotExist(str) {
   let arrayOfExpression = currentExpression.split("");
   insertOperator(str, arrayOfExpression);
   currentExpression = arrayOfExpression.join("");
+  console.log(currentExpression)
 }
 
 // Calculation
