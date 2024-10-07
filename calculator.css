@@ -5,11 +5,22 @@ body {
   font-family: 'Noto Sans Math', 'Arial';
   background-color: silver;
 }
+body::after {
+  content: "";
+  background: url('./images/bg-calculator.jpg');
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.7;
+}
 #calculator-container {
-  background-color: #444;
+  background-color: #333;
   padding: 0.8rem;
   width: 24rem;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
 }
 
 /* DisplayPanel */
