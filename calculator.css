@@ -33,7 +33,7 @@ body::after {
   justify-content: space-between;
   width: 100%;
   height: 5rem;
-  background-color: aquamarine;
+  background-color: #B2BEB5;
   border: 2px solid gray;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
@@ -118,7 +118,9 @@ body::after {
 }
 #equal {
   background:#2E5894;
-  font-weight: 700;
+  font-weight: normal;
+  font-size: 2rem;
+  padding: 0;
 }
 #clear {
   display: flex;
@@ -141,7 +143,13 @@ body::after {
   margin-top: 0.5rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
+  #calculator-project {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 400px) {
   body {
     margin: 0;
   }

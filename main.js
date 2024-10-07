@@ -104,6 +104,7 @@ MEMORY_CLEAR.addEventListener("click", clearMemory)
 
 MEMORY_REVOKE.addEventListener("click", () => {
   let match = display.value.slice(-1);
+  if (memoryContent.textContent == "0") return;
   if (!setOfOperatorsExists(match, classicOperators)
      && !match.includes("(")) {
     display.value += "+" + +memoryContent.textContent;
