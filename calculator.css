@@ -18,7 +18,7 @@ body::after {
 }
 #calculator-container {
   background-color: #333;
-  padding: 0.8rem;
+  padding: 1rem;
   width: 24rem;
   border-radius: 0.4rem;
 }
@@ -104,6 +104,7 @@ body::after {
 }
 .row.advanced-buttons div, .row.first-row div {
   font-size: 1.2rem;
+  padding: 0.3rem
   }
 .row.first-row div:not(#all-clear) {
   background: #333;
@@ -125,7 +126,9 @@ body::after {
   background: silver;
   color:#111;
 }
-
+.row.last-row {
+  margin-top: 0.5rem;
+}
 
 @media screen and (max-width: 500px) {
   body {

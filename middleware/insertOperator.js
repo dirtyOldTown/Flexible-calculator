@@ -9,7 +9,8 @@ function insertOperator(str, arr) {
       && setOfOperatorsExists(value, specificOperatorsAndConstant) && index != 0) {
         inputRegulation(str, value, index, arr);
     }
-    // Insert operator(*) after roots and constants (if it not exists)
+    // Insert operator(*) after constants (if it not exists)
+    
     if (setOfOperatorsExists(arr[index-1], constants)
       && setOfOperatorsExists(value, numbers)) {
         inputRegulation(str, value, index, arr);
