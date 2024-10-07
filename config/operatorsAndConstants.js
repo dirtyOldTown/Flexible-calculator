@@ -20,5 +20,5 @@ export const PERCENT = document.getElementById("percent");
 
 // Other operators
 export const ALL_CLEAR = document.getElementById("all-clear");
-export const CLEAR = document.getElementById("clear");
+export const DELETE_LEFT = document.getElementById("clear");
 

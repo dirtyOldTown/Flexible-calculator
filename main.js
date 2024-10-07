@@ -3,7 +3,7 @@ import { preventDuplicateOperator } from "./controllers/inputsController/prevent
 import { minusOperatorCorrection } from "./controllers/inputsController/minusOperatorCorrection.js";
 import { deleteIrregularOperator } from "./controllers/inputsController/deleteIrregularOperators.js";
 import { preventIrregularNumber } from "./controllers/inputsController/preventIrregularNumber.js";
-import { ALL_CLEAR, CLEAR, EQUAL, MULTIPLY, PI, E, PERCENT } from "./config/operatorsAndConstants.js";
+import { ALL_CLEAR, DELETE_LEFT, EQUAL, MULTIPLY, PI, E, PERCENT } from "./config/operatorsAndConstants.js";
 import { MEMORY_CLEAR, MEMORY_REVOKE, MEMORY_PLUS, MEMORY_MINUS } from "./config/operatorsAndConstants.js";
 import { numbers, advancedOperatorsAndConstants, classicOperators, specificOperatorsAndConstant, rootsAndConstants } from "./config/setsOfOperatorsAndConstants.js";
 import { calculate } from "./controllers/calculationController.js";
@@ -104,7 +104,8 @@ MEMORY_CLEAR.addEventListener("click", clearMemory)
 
 MEMORY_REVOKE.addEventListener("click", () => {
   let match = display.value.slice(-1);
-  if (!setOfOperatorsExists(match, classicOperators)) {
+  if (!setOfOperatorsExists(match, classicOperators)
+     && !match.includes("(")) {
     display.value += "+" + +memoryContent.textContent;
     currentExpression += "+" + +memoryContent.textContent;
   } else {
@@ -118,7 +119,7 @@ ALL_CLEAR.addEventListener("click", () => {
   display.value = "";
 });
 
-CLEAR.addEventListener("click", () => {
+DELETE_LEFT.addEventListener("click", () => {
   display.value = display.value.slice(0, -1);
   currentExpression = display.value;
   insertOperatorIfItNotExist("*");
