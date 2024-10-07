@@ -145,4 +145,4 @@ PERCENT.addEventListener("click", () => {
   }
 });
 
-
+console.log()

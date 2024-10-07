@@ -118,9 +118,17 @@ body::after {
   font-weight: 700;
 }
 #clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background:  #ED9121;
   color: #111;
   font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0;
+}
+#clear .erase-left {
+  color: #222;
 }
 .row .decimal-point {
   background: silver;
