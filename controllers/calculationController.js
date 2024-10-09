@@ -1,5 +1,6 @@
 async function calculate(display, exp) {
   try {
+    console.log("Before calc: " + exp)
     let result = await eval(exp);
     if (result.toString().length > 5) {
       result = Number(result.toFixed(5));

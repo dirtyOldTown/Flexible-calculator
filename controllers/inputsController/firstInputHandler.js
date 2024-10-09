@@ -7,10 +7,11 @@ function firstInputHandler(target, input, display) {
   }
 
 function addSpecificExpression(input, display) {
-  if (display.value.length == 0 && (input == "0" || input == ".")) {
+  if (input == "." || input == "0") {
     display.value = "0.";
   } else {
      display.value += input;
   }
 }
-  export { firstInputHandler }
+
+export { firstInputHandler }

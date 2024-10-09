@@ -9,16 +9,15 @@ function deleteIrregularOperator(input, display, arr) {
     else {
       display.value += input;
     }
+    
     deleteOperatorAfterRootOrLeftBracket(input, match, display)
   }
 
 function deleteOperatorAfterRootOrLeftBracket(input, match, display) {
   if (isNaN(match) && (setOfOperatorsExists(match, roots) || match.includes("("))
-    && (setOfOperatorsExists(input, classicOperators) || input == ")")) {
+    && ((setOfOperatorsExists(input, classicOperators) && input != "-") || input == ")")) {
     display.value = display.value.slice(0, -1);
   }
 }
-
-
 
 export { deleteIrregularOperator }

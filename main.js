@@ -5,12 +5,12 @@ import { deleteIrregularOperator } from "./controllers/inputsController/deleteIr
 import { preventIrregularNumber } from "./controllers/inputsController/preventIrregularNumber.js";
 import { ALL_CLEAR, DELETE_LEFT, EQUAL, MULTIPLY, PI, E, PERCENT } from "./config/operatorsAndConstants.js";
 import { MEMORY_CLEAR, MEMORY_REVOKE, MEMORY_PLUS, MEMORY_MINUS } from "./config/operatorsAndConstants.js";
-import { numbers, advancedOperatorsAndConstants, classicOperators, specificOperatorsAndConstant, rootsAndConstants } from "./config/setsOfOperatorsAndConstants.js";
+import { numbers, advancedOperatorsAndConstants, classicOperators, roots } from "./config/setsOfOperatorsAndConstants.js";
 import { calculate } from "./controllers/calculationController.js";
 import { setOfOperatorsExists, setOfNumbersExists } from "./middleware/setOfOperatorsHandler.js";
 import { memoryPlusHandler, memoryMinusHandler, clearMemory } from "./controllers/memoryController.js";
 import { insertOperator } from "./middleware/insertOperator.js";
-
+import { SQUARE_ROOT, CUBE_ROOT } from "./config/operatorsAndConstants.js";
 let keypad = document.querySelector(".keypad");
 let display = document.querySelector(".calculation-container > input");
 let memory = document.querySelector(".memory");
@@ -18,14 +18,12 @@ let memoryContent = document.querySelector(".memory-content");
 let currentExpression = 0;
 
 // Prevent default action on events
-keypad.addEventListener("mousedown", (event) => {
-  event.preventDefault();
-});
-memory.addEventListener("mousedown", (event) => {
+document.addEventListener("mousedown", (event) => {
   event.preventDefault();
 });
 
 // Inputs controller
+display.blur();
 keypad.addEventListener("mousedown", (e) => {
   let target = e.target.closest(".number, .operator.visible");
   if (!target) return;
@@ -44,7 +42,7 @@ keypad.addEventListener("mousedown", (e) => {
   }
 
   minusOperatorCorrection(display);
- preventIrregularNumber(display, currentExpression);
+  preventIrregularNumber(display, currentExpression);
 
   // Expression for calculation
   currentExpression = display.value;
@@ -80,7 +78,8 @@ function insertOperatorIfItNotExist(str) {
 
 // Calculation
 EQUAL.addEventListener("click", () => {
-  calculate(display, currentExpression)
+  calculate(display, currentExpression);
+  display.blur();
 });
 
 // Memory handlers
@@ -118,6 +117,7 @@ MEMORY_REVOKE.addEventListener("click", () => {
 // Clearing
 ALL_CLEAR.addEventListener("click", () => {
   display.value = "";
+  display.blur();
 });
 
 DELETE_LEFT.addEventListener("click", () => {
@@ -147,4 +147,14 @@ PERCENT.addEventListener("click", () => {
   }
 });
 
-console.log()
+//TEST
+display.onfocus = () => {
+  display.value += "("
+}
+SQUARE_ROOT.addEventListener("click", () => {
+  display.focus();
+  console.log(currentExpression)
+});
+
+
+
