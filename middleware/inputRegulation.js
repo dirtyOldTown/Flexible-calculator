@@ -1,6 +1,6 @@
-import { rootsAndConstants, numbers, constants, specificOperatorsAndConstant } from "../config/setsOfOperatorsAndConstants.js";
+import { rootsAndConstants, numbers } from "../config/setsOfOperatorsAndConstants.js";
 import { setOfOperatorsExists } from "./setOfOperatorsHandler.js";
-import { SQUARE_ROOT, CUBE_ROOT, PI, E } from "../config/operatorsAndConstants.js";
+import { PI, E } from "../config/operatorsAndConstants.js";
 function inputRegulation(str, value, index, arr) {
   if (setOfOperatorsExists(value, rootsAndConstants) && 
     arr[index-1].includes("(")) {

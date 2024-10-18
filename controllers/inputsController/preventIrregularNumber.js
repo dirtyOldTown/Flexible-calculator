@@ -6,10 +6,13 @@ function preventIrregularNumber(display, exp) {
 
 // Suppress the first two zeros in the expression
 function zeroCorrection(display, exp) {
-  let regexp = /[^.]\b00\b/;
+  let regexp = /[^.]\b0\d\b/;
   let match = display.value.match(regexp);
-  if (match && display.value != ".") {
+  if (match && display.value != "." && display.value.slice(-1) == "0") {
     display.value = display.value.slice(0, -1) + ".";
+    exp = exp.slice(0, -1);
+  } else if (match && display.value != ".") {
+    display.value = display.value.slice(0, -1) + "." + display.value.slice(-1);
     exp = exp.slice(0, -1);
   }
 }

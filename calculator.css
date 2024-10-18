@@ -39,6 +39,9 @@ body::after {
   border-radius: 0.4rem;
   margin-bottom: 1rem;
 }
+#display input[placeholder] {
+  font-size: 1.7rem;;
+}
 .memory {
   font-size: 1.1rem;
   margin-left: 0.2rem;

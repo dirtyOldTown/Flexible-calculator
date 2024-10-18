@@ -23,5 +23,5 @@ function clearMemory() {
 export { 
   memoryPlusHandler, 
   memoryMinusHandler,
-  clearMemory
+  clearMemory,
 }

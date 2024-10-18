@@ -11,11 +11,12 @@ import { setOfOperatorsExists, setOfNumbersExists } from "./middleware/setOfOper
 import { memoryPlusHandler, memoryMinusHandler, clearMemory } from "./controllers/memoryController.js";
 import { insertOperator } from "./middleware/insertOperator.js";
 import { SQUARE_ROOT, CUBE_ROOT } from "./config/operatorsAndConstants.js";
+import { inserLeftBracket } from "./middleware/rootsHandler.js";
+
 let keypad = document.querySelector(".keypad");
 let display = document.querySelector(".calculation-container > input");
-let memory = document.querySelector(".memory");
 let memoryContent = document.querySelector(".memory-content");
-let currentExpression = 0;
+let currentExpression = "";
 
 // Prevent default action on events
 document.addEventListener("mousedown", (event) => {
@@ -29,10 +30,14 @@ keypad.addEventListener("mousedown", (e) => {
   if (!target) return;
   let input = target.textContent;
   let len = display.value.length;
-
   // Enable the expression to be inside the display panel
-  if (len > 21) return;
-
+  if (len <= 21) {
+    display.style.fontSize = "1.7rem";
+  } else if (len > 21 && len <= 37) {
+      display.style.fontSize = "1.2rem";
+  } else {
+    return;
+  }
   // Prepare expression for calculation (Automatic correction of most errors in the expression)
   if (len == 0) {
     firstInputHandler(target, input, display);
@@ -48,6 +53,7 @@ keypad.addEventListener("mousedown", (e) => {
   currentExpression = display.value;
 
   insertOperatorIfItNotExist("*");
+  
 });
 
 // Prepare expression befor calculation
@@ -57,6 +63,8 @@ keypad.addEventListener("mouseup", (e) => {
   replaceStringWithOperatorOrConstant(MULTIPLY.textContent, "*");
   replaceStringWithOperatorOrConstant(PI.textContent, Math.PI);
   replaceStringWithOperatorOrConstant(E.textContent, Math.E);
+
+console.log(currentExpression);
 });
 function replaceStringWithOperatorOrConstant(str, replacement) {
   let arrayOfExpression = currentExpression.split("");
@@ -73,7 +81,6 @@ function insertOperatorIfItNotExist(str) {
   let arrayOfExpression = currentExpression.split("");
   insertOperator(str, arrayOfExpression);
   currentExpression = arrayOfExpression.join("");
-  console.log(currentExpression)
 }
 
 // Calculation
@@ -103,11 +110,16 @@ MEMORY_CLEAR.addEventListener("click", clearMemory)
 
 MEMORY_REVOKE.addEventListener("click", () => {
   let match = display.value.slice(-1);
+  let memoryOperator = memoryContent.textContent.slice(0, 1);
+  let altMemory = ""; 
   if (memoryContent.textContent == "0") return;
-  if (!setOfOperatorsExists(match, classicOperators)
-     && !match.includes("(")) {
-    display.value += "+" + +memoryContent.textContent;
-    currentExpression += "+" + +memoryContent.textContent;
+  if (!setOfOperatorsExists(match, classicOperators)) {
+    return;
+  }
+  if (memoryOperator == "-" && display.value.length > 0) {
+    altMemory += "(" + memoryContent.textContent + ")";
+    display.value += altMemory;
+    currentExpression += altMemory
   } else {
     display.value += +memoryContent.textContent;
     currentExpression += +memoryContent.textContent;
@@ -117,6 +129,7 @@ MEMORY_REVOKE.addEventListener("click", () => {
 // Clearing
 ALL_CLEAR.addEventListener("click", () => {
   display.value = "";
+  display.style.fontSize = "1.7rem";
   display.blur();
 });
 
@@ -143,18 +156,25 @@ PERCENT.addEventListener("click", () => {
     currentExpression = current + +rationalNumber / 100;
   } else {
     console.log("The number to which this operator is applied must be a rational number");
-    alert(`The number to which this operator is applied must be a rational number`);
+    alert(`The last number in the expression to which this operator is applied must be a rational number!`);
   }
 });
 
-//TEST
-display.onfocus = () => {
-  display.value += "("
-}
+SQUARE_ROOT.addEventListener("click", () => inserLeftBracket(display));
+/*
 SQUARE_ROOT.addEventListener("click", () => {
-  display.focus();
-  console.log(currentExpression)
-});
+  setTimeout(() => {
+    alert("Please close this parenthesis after completing the expression you are looking for the n-root of!");
+  });
+}, { once: true });
+*/
+CUBE_ROOT.addEventListener("click", () => inserLeftBracket(display));
+
+CUBE_ROOT.addEventListener("click", () => {
+  setTimeout(() => {
+    alert("Please close this parenthesis after completing the expression you are looking for the n-root of!");
+  });
+}, { once: true });
 
 
 
