@@ -5,4 +5,5 @@ function setOfOperatorsExists(str, arr) {
 function setOfNumbersExists(str, arr) {
     return arr.find(op => op.includes(str));
 }
+
 export { setOfOperatorsExists, setOfNumbersExists }

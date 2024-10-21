@@ -23,6 +23,10 @@ document.addEventListener("mousedown", (event) => {
   event.preventDefault();
 });
 
+keypad.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+});
+
 // Inputs controller
 display.blur();
 keypad.addEventListener("mousedown", (e) => {
@@ -64,7 +68,7 @@ keypad.addEventListener("mouseup", (e) => {
   replaceStringWithOperatorOrConstant(PI.textContent, Math.PI);
   replaceStringWithOperatorOrConstant(E.textContent, Math.E);
 
-console.log(currentExpression);
+  console.log(currentExpression);
 });
 function replaceStringWithOperatorOrConstant(str, replacement) {
   let arrayOfExpression = currentExpression.split("");
@@ -135,6 +139,9 @@ ALL_CLEAR.addEventListener("click", () => {
 
 DELETE_LEFT.addEventListener("click", () => {
   display.value = display.value.slice(0, -1);
+  if (display.value == "0") {
+     display.value = "";
+  }
   currentExpression = display.value;
   insertOperatorIfItNotExist("*");
   replaceStringWithOperatorOrConstant(MULTIPLY.textContent, "*");
@@ -161,13 +168,13 @@ PERCENT.addEventListener("click", () => {
 });
 
 SQUARE_ROOT.addEventListener("click", () => inserLeftBracket(display));
-/*
+
 SQUARE_ROOT.addEventListener("click", () => {
   setTimeout(() => {
     alert("Please close this parenthesis after completing the expression you are looking for the n-root of!");
   });
 }, { once: true });
-*/
+
 CUBE_ROOT.addEventListener("click", () => inserLeftBracket(display));
 
 CUBE_ROOT.addEventListener("click", () => {
