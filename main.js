@@ -168,13 +168,13 @@ PERCENT.addEventListener("click", () => {
 });
 
 SQUARE_ROOT.addEventListener("click", () => inserLeftBracket(display));
-
+/*
 SQUARE_ROOT.addEventListener("click", () => {
   setTimeout(() => {
     alert("Please close this parenthesis after completing the expression you are looking for the n-root of!");
   });
 }, { once: true });
-
+*/
 CUBE_ROOT.addEventListener("click", () => inserLeftBracket(display));
 
 CUBE_ROOT.addEventListener("click", () => {

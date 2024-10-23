@@ -1,0 +1,69 @@
+FLEKSIBILNI KALKULATOR
+
+Flexible calculator for quick calculation of complex mathematical expressions: 
+- This calculator is made according to the principle of standard calculation in mathematics, when mathematical expressions of the type "2ePI(3 + 2)" and similar are entered into the workbook, when it is assumed that the sign of the product is between corresponding values, so the given expression is directly calculated as "2*e*PI*(3+2)". 
+-Also, the number of possible errors when entering numbers or operators is maximally reduced (eg if we first press the zero key and then press the zero key again, instead of the inappropriate number in the decimal system "00" we get "0.") and similar . 
+- All individual specifics (advantages) that characterize this calculator can be found in the "instructions" section below.
+
+
+Uputstvo:
+
+- Specifics when entering expressions
+
+1. Start entry (first entry)
+
+ a) Zero and decimal point correction
+
+    i) When the first number we enter is "0", automatic correction is made to the expression "0.,
+    because there is no number in the decimal system that starts with "00" or "05".
+    ii) The same applies when the first entry is a decimal point ("".").
+
+ b) Allowed and not allowed first entry
+    i) All first entries are allowed, except for obviously inappropriate ones: ("+", "x", "/", ")"),
+    ii) The others are corrected if necessary, in the manner previously stated under a).
+
+ 2. Preventing duplicate operators and decimal points
+
+    When the last entry is one of the basic operators: ("+", "x", "/", "-") or a decimal point (".") at each
+    the next entry of one of them, it replaces the previous one. For example: (Instead of making a mistake i
+    the expression says "4+-", it will only say "4-" etc.).
+
+ 3. Prevention of operators in an inappropriate place in an expression
+
+   a) After entering the symbol for the nth root of an expression, the first entry is prevented from being
+   some of the standard operators ("+", "*", "/"), which would be an error of course.
+   PS: The possibility is left that the sign "-" can be found in front of the expression and in the square root,
+   although for now this calculator does not handle irrational numbers.
+   b) The same applies after entering the left bracket symbol ("(").
+
+  4. Prevention of inappropriate decimal numbers
+     Zero and decimal point correction for any continuous input,
+     i.e. prevention of obtaining numbers or expressions of the type: ("5.06.7", "055") and similar.
+
+- Specifics when calculating expressions
+
+1. Adding a multiplication sign to an expression
+   If an expression of the type: 2ePI(2 + 5) (which is common in mathematics) is entered, it is automatically transformed into the expression
+   2*e*PI*(2 + 5) when calculating it. 
+2. Calculating the n-th root (of a number or expression)
+   When the root symbol is entered, the left parenthesis is automatically entered and the user is prompted
+   to close the parenthesis when he finishes the expression from which the nth root is to be calculated.
+3. Calculating the percentage of a number
+   By pressing the key ("%") - the last rational number in the expression is transformed into its percentage,
+   otherwise, a note is sent that the key is applicable only to rational numbers that are the last in the expression
+   when pressing this key("%"). For example, if we type the expression 3 + 33, we automatically get: 3 + 0.33, etc.
+   
+- Memory
+
+   a) Key M+ : Adding a rational number to the existing number in the memory.
+   b) Key M-: Subtraction of a rational number from the existing number in the memory.
+   c) MR key: A rational number in the memory is included in the expression and only that
+      when the last symbol in the expression is some classic operator ("+", "-", "*", "/")
+      that is, only multiplication, division, addition or subtraction of a number in memory is allowed
+      the current expression on the calculator display.
+   PS: By pressing each of these keys, the memory itself is displayed, ie. its current value.
+   d) MC key: Erasing the memory, i.e. M = 0, and the memory is no longer visible.
+
+      
+
+

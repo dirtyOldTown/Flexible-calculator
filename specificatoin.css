@@ -1,0 +1,82 @@
+#about-project::-webkit-scrollbar {
+  width: 17px;
+}
+#about-project::-webkit-scrollbar-track {
+  background-color: gray;
+}
+#about-project::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+#about-project {
+  width: 50%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #FFFDD0;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-height: 30rem;
+  overflow-y: scroll;
+}
+#about-project h1 {
+  font-family: 'Oswald Bold', 'Arial', 'Helvetica';
+  color: #8294ee;
+  font-size: 2rem;
+}
+#about-project h2 {
+  font-family: 'Oswald Bold', 'Arial', 'Helvetica';
+  font-size: 1.4rem;
+  text-align: center;
+  color: #EEDC82;
+}
+.text {
+  font-size: 1rem;
+  text-align: left;
+  color: #faf4d8;
+  font-family:'Roboto', 'Times New Roman', Times, serif;
+}
+hr {
+  width: 80%;
+  border: 1px dotted grey;
+  margin-top: 2rem;
+}
+.instructions {
+  font-family: 'Oswald Bold', 'Helvetica';
+  color: #eea682;
+  font-size: 1.8rem;
+}
+.user-manual {
+  text-align: left;
+}
+.user-manual h3 {
+  font-family: 'Oswald Bold', 'Arial', 'Helvetica';
+  font-size: 1.4rem;
+  color: #94ee82;
+}
+.user-manual p {
+  font-size: 1rem;
+  text-align: left;
+  color: #faf4d8;
+  font-family:'Roboto', 'Times New Roman', Times, serif;
+}
+
+@media screen and (max-width: 992px) {
+  #about-project {
+    width: 100%;
+    margin: 0;
+    margin-top: 2rem;
+    overflow: hidden;
+    max-height: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #about-project {
+    width: 100%;
+    border-radius: 0;
+  }
+  .text {
+    text-align: center;
+  }
+}

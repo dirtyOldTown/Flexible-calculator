@@ -18,10 +18,12 @@ body::after {
 }
 #calculator-project {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin: 1.4rem;
 }
 #calculator-container {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.72);
   padding: 1rem;
   width: 24rem;
   border-radius: 0.4rem;
@@ -147,20 +149,16 @@ body::after {
   margin-top: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   #calculator-project {
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
-}
-@media screen and (max-width: 480px) {
   body {
     margin: 0;
     background: url('./images/bg-calculator.jpg');
   }
-  body::after {
-    position: relative;
-  }
+}
+@media screen and (max-width: 480px) {
   #calculator-project {
     justify-content: center;
     align-items: center;

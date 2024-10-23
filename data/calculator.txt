@@ -1,0 +1,72 @@
+FLEKSIBILNI KALKULATOR
+
+Fleksibilni kalkulator za brzo izračunavanje složenih matematičkih izraza:
+
+ -Ovaj kalkulator je urađen po principu standardnog računanja u matematici, kada se u radnu svesku
+ unose matematički izrazi tipa "2ePI(3 + 2)" i slično, kada se pretpostavlja da se znak proizvoda
+ nalazi između odgovarajućih vrednosti, pa se navedeni izraz direktno izračunava kao "2*e*PI*(3+2)".
+ -Takođe, maksimalno se smanjuje broj mogućih grešaka prilikom unosa brojeva ili operatora (na pr. ako prvo pritisnimo taster za nulu i nakon
+ toga ponovo pritisnimo taster za nulu, umesto neodgovarajućeg broja u dekadnom sistemu "00" dobijamo "0.") i slično.
+- Sve pojedinačne specifičnosti (prednosti) koje karakterišu ovaj kalkulator možete naći u odeljku "uputstvo", dole.
+
+
+Uputstvo:
+
+-Specifičnosti kod unosa izraza
+
+1. Početak unosa (prvi unos)
+
+ a) Korekcija nule i decimalne tačke
+    i) Kada je prvi broj koji unosimo "0", vrši se automatska korekcija u izraz "0.,
+    jer ne postoji broj u dekadnom sistemu koji počinje sa "00" ili "05".
+    ii) Isto važi i kada je prvi unos decimalna tačka (".").
+
+ b) Dozvoljeni i nedozvoljeni prvi unos
+    i) Dozvoljeni su svi prvi unosi, osim očigledno neodgovarajućih: ("+", "x", "/", ")"),
+    ii) Ostali se po potrebi koriguju, na način koji je prethodno naveden pod a).
+
+ 2. Sprečavanje dupliranja operatora i decimalne tačke
+
+    Kada je zadnji unos neki od osnovnih operatora: ("+", "x", "/", "-") ili decimalna tačka (".") prilikom svakog
+    sledećeg unosa nekog od njih, on zamenjuje prethodni. Na pr:(Umesto da se napravi greška i
+    u izrazu stoji "4+-", stajaće samo "4-" i sl.).
+
+ 3. Prevencija operatora na neodgovarajućem mestu u izrazu
+
+   a) Posle unosa simbola za n-ti koren nekog izraza, sprečava se  da prvi unos bude
+   neki od standardnih operatora ("+", "*", "/"), što bi bilo greška naravno.
+   PS: Ostavljena je mogućnost da se znak "-" nađe  ispred izraza i u kvadratnom korenu,
+   mada za sada ovaj kalkulator ne barata iracionalnim brojevima.
+   b) Slično važi i posle unosa simbola leve zagrade ("(").
+
+  4. Prevencija neodgovarajućih decimalnih brojeva
+     Korekcija nule i decimalne tačke prilikom bilo kog kontinuiranog unosa,
+     tj. prevencija dobijanja brojeva ili izraza tipa: ("5.06.7", "055") i sl.
+
+-Specifičnosti prilikom izračunavanja izraza
+
+1. Dodavanje znaka množenja izrazu
+   Ako je unet izraz tipa: 2ePI(2 + 5) (koji je uobičajen u matematici), on se automatski transformiše u izraz
+   2*e*PI*(2 + 5) prilikom njegovog izračunavanja. 
+2. Računanje n-tog korena (broja ili izraza)
+   Kada se unese simbol za koren, automatski se unosi i leva zagrada i molba korisniku
+   da zatvori zagradu kad završi izraz iz koga treba izračunati n-ti koren.
+3. Računanje postotka nekog broja
+   Pritiskom na taster ("%") - zadnji racionalni broj u izrazu se transformiše u njegov procenat,
+   u suprotnom se šalje napomena da je taster primenjiv samo na racionalne brojeve koji su poslednji u izrazu
+   prilikom pritiska ovog tastera("%"). Na primer ako ukucamo izraz 3 + 33, automatski dobijamo: 3 + 0.33 i sl.
+   
+-Memorija
+
+   a) Taster M+ : Dodavanje racionalnog broja postojećem broju u memoriji.
+   b) Taster M- : Oduzimanje racionalnog broja postojećem broju u memoriji.
+   c) Taster MR : Racionalan broj u memoriji se uključuje u izraz i to samo
+      kada je poslednji simbol u izrazu neki klasičan operator ("+", "-", "*", "/")
+      to jest dozvoljeno je samo množenje, deljenje, dodavanje ili oduzimanje broja u memoriji
+      trenutnom izrazu na displeju kalkulatora.
+   PS: Pritiskom na svaki od ovih tastera prikazuje se i sama memorija, tj. njena trenutna vrednost.
+   d) Taster MC : Brisanje memorije, tj. M = 0, i memorija više nije vidljiva.
+
+      
+
+
