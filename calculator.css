@@ -168,5 +168,7 @@ body::after {
   }
   #calculator-container {
     width: 100%;
+    border-radius: 0;
+    padding-top: 2rem;
   }
 }
