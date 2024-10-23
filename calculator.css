@@ -25,6 +25,7 @@ body::after {
 #calculator-container {
   background-color: rgba(0, 0, 0, 0.72);
   padding: 1rem;
+  padding-top: 2rem;
   width: 24rem;
   border-radius: 0.4rem;
 }
@@ -169,6 +170,5 @@ body::after {
   #calculator-container {
     width: 100%;
     border-radius: 0;
-    padding-top: 2rem;
   }
 }
