@@ -23,7 +23,7 @@ body::after {
   margin: 1.4rem;
 }
 #calculator-container {
-  background-color: rgba(0, 75, 73, 0.85);
+  background-color: rgba(52, 65, 72, 0.85);
   padding: 1rem;
   padding-top: 2rem;
   width: 24rem;
@@ -86,7 +86,7 @@ body::after {
   font-size: 1.3rem;
   padding: 0.5rem 0rem;
   background-color: #222;
-  color: whitesmoke;
+  color: #c6c8c8;
   margin: 0.2rem;
   border-top: 2px solid #555;
   border-left: 2px solid #555;
@@ -104,11 +104,11 @@ body::after {
   border-style: inset;
 }
 .row .number {
-  background-color: silver;
+  background-color: #c6c8c8;
   color: #111;
 }
 .row .operator {
-  background: linear-gradient(#00201F, #001514);
+  background: linear-gradient(#1a2124, #1a2124);
 }
 .row.advanced-buttons {
   margin-bottom: 0.5rem;
@@ -118,15 +118,15 @@ body::after {
   padding: 0.3rem
   }
 .row.first-row div:not(#all-clear) {
-  background: #001514;
-  color: #B6CBCB;
+  background: #1a2124;
+  color: #c6c8c8;
 }
 
 #all-clear {
-  background-color: #4b0002;
+  background-color: #5E1916;
 }
 #equal {
-  background:#00324B;
+  background:#1F456E;
   font-weight: normal;
   font-size: 2rem;
   padding: 0;
@@ -135,7 +135,7 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:  #A5A252;
+  background:  chocolate;
   color: #111;
   font-weight: 700;
   font-size: 1.7rem;
@@ -145,7 +145,7 @@ body::after {
   color: #222;
 }
 .row .decimal-point {
-  background: silver;
+  background: #c6c8c8;
   color:#111;
 }
 .row.last-row {
