@@ -28,6 +28,7 @@ body::after {
   padding-top: 2rem;
   width: 24rem;
   border-radius: 0.4rem;
+  border: 4px double gray;
 }
 
 /* DisplayPanel */
@@ -166,9 +167,10 @@ body::after {
     width: 100%;
     min-width: 22rem;
     margin: 0;
+    margin-top: 0.5rem;
   }
   #calculator-container {
-    width: 100%;
+    width: 97%;
     border-radius: 0;
   }
 }
