@@ -23,7 +23,7 @@ body::after {
   margin: 1.4rem;
 }
 #calculator-container {
-  background-color: rgba(52, 65, 72, 0.85);
+  background-color: rgba(52, 65, 72, 0.9);
   padding: 1rem;
   padding-top: 2rem;
   width: 24rem;
@@ -119,7 +119,7 @@ body::after {
   }
 .row.first-row div:not(#all-clear) {
   background: #1a2124;
-  color: #c6c8c8;
+  color: #D67229;
 }
 
 #all-clear {
