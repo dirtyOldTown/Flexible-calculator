@@ -17,7 +17,7 @@
   text-align: center;
   border-radius: 10px;
   padding: 1.5rem;
-  max-height: 30rem;
+  max-height: 31rem;
   overflow-y: scroll;
 }
 #about-project h1 {
@@ -40,7 +40,7 @@
 hr {
   width: 80%;
   border: 1px dotted grey;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 .instructions {
   font-family: 'Oswald Bold', 'Helvetica';
