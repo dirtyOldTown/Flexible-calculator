@@ -27,7 +27,7 @@ body::after {
   padding: 1rem;
   padding-top: 2rem;
   width: 24rem;
-  border-radius: 0.4rem;
+  border-radius: 0.8rem;
   border: 4px double gray;
 }
 
@@ -171,6 +171,5 @@ body::after {
   }
   #calculator-container {
     width: 97%;
-    border-radius: 0;
   }
 }
