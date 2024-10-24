@@ -1,6 +1,6 @@
 # Flexible Calculator
 ## Calculator for quick calculation of complex mathematical expressions
- * This calculator is made according to the principle of standard calculation 
+  * This calculator is made according to the principle of standard calculation 
     in mathematics, when mathematical expressions of the type "2e&pi;(3 + 2)" and similar 
     are entered into the workbook, when it is assumed that the sign of the product is 
     between corresponding values, so the given expression is directly calculated 
