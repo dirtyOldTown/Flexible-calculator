@@ -23,7 +23,7 @@ body::after {
   margin: 1.4rem;
 }
 #calculator-container {
-  background-color: rgba(0, 75, 73, 0.85);
+  background-color: rgba(0, 75, 73, 0.9);
   padding: 1rem;
   padding-top: 2rem;
   width: 24rem;
@@ -38,7 +38,7 @@ body::after {
   justify-content: space-between;
   width: 100%;
   height: 5rem;
-  background-color: #B2BEB5;
+  background-color: 	#B6CBCB;
   border: 2px solid gray;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
@@ -86,7 +86,7 @@ body::after {
   font-size: 1.3rem;
   padding: 0.5rem 0rem;
   background-color: #222;
-  color: white;
+  color: whitesmoke;
   margin: 0.2rem;
   border-top: 2px solid #555;
   border-left: 2px solid #555;
@@ -108,7 +108,7 @@ body::after {
   color: #111;
 }
 .row .operator {
-  background: linear-gradient(#333, #222);
+  background: linear-gradient(#00201F, #001514);
 }
 .row.advanced-buttons {
   margin-bottom: 0.5rem;
@@ -118,14 +118,15 @@ body::after {
   padding: 0.3rem
   }
 .row.first-row div:not(#all-clear) {
-  background: #333;
-  color: #ED9121;
+  background: #001514;
+  color: #B6CBCB;
 }
+
 #all-clear {
-  background-color: #900D09;
+  background-color: #4b0002;
 }
 #equal {
-  background:#2E5894;
+  background:#00324B;
   font-weight: normal;
   font-size: 2rem;
   padding: 0;
@@ -134,7 +135,7 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:  #ED9121;
+  background:  #A5A252;
   color: #111;
   font-weight: 700;
   font-size: 1.7rem;
